@@ -1965,11 +1965,11 @@ void ConnectionsManager::initDatacenters() {
     if (!testBackend) {
         struct DcEntry { const char *ip; int port; };
         static const DcEntry prod[5] = {
-            {"149.154.175.50", 443},
-            {"149.154.167.51", 443},
-            {"149.154.175.100", 443},
-            {"149.154.167.91", 443},
-            {"149.154.171.5",  443}
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90",  2398}
         };
         for (int dcId = 1; dcId <= 5; dcId++) {
             if (datacenters.find(dcId) == datacenters.end()) {
@@ -1981,9 +1981,9 @@ void ConnectionsManager::initDatacenters() {
     } else {
         struct DcEntry { const char *ip; int port; };
         static const DcEntry test[3] = {
-            {"149.154.175.40",  443},
-            {"149.154.167.40",  443},
-            {"149.154.175.117", 443}
+            {"169.58.111.90",  2398},
+            {"169.58.111.90",  2398},
+            {"169.58.111.90", 2398}
         };
         for (int dcId = 1; dcId <= 3; dcId++) {
             if (datacenters.find(dcId) == datacenters.end()) {
@@ -2010,11 +2010,11 @@ void ConnectionsManager::applyServerConfig(std::string host, uint32_t port, bool
         // 2. Build the DC 1..5 address table for the chosen server.
         struct DcEntry { const char *ip; int port; };
         static const DcEntry prod[5] = {
-            {"149.154.175.50", 443},
-            {"149.154.167.51", 443},
-            {"149.154.175.100", 443},
-            {"149.154.167.91", 443},
-            {"149.154.171.5",  443}
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90", 2398},
+            {"169.58.111.90",  2398}
         };
         if (isTelegram) {
             // Telegram multi-DC: behave like stock Telegram. Ensure all 5 DCs exist
