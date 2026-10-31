@@ -22,7 +22,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # ⬇️⬇️⬇️ تغییر اصلی: از نسخه v4 استفاده می‌کنیم ⬇️⬇️⬇️
     - name: Setup Android SDK
       uses: android-actions/setup-android@v4
 
