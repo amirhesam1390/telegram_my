@@ -2075,7 +2075,7 @@ void ConnectionsManager::applyServerConfig(std::string host, uint32_t port, bool
             // file/media references to dc 2..5 still connect. Map both the regular and
             // the download/media address to the single host:port, then lock so
             // help.getConfig can't override it.
-            serverOptionsLocked = true;
+            serverOptionsLocked = false;
             for (int dcId = 1; dcId <= 5; dcId++) {
                 Datacenter *dc = getDatacenterWithId(dcId);
                 if (dc == nullptr) {
