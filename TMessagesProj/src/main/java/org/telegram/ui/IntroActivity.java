@@ -83,6 +83,7 @@ import org.telegram.ui.Components.ScaleStateListAnimator;
 import org.telegram.ui.Components.SimpleThemeDescription;
 import org.telegram.ui.Components.voip.CellFlickerDrawable;
 import org.telegram.owpengram.OwpengramServers;
+import org.telegram.ui.LoginActivity;
 
 import java.util.ArrayList;
 
@@ -407,7 +408,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
                 return;
             }
             startPressed = true;
-            presentFragment(new ServerSelectFragment());
+            presentFragment(new LoginActivity());
             // Reset so the button works again if the user navigates back from the
             // server picker (ServerSelectFragment is pushed on top, not finishing intro).
             startPressed = false;
