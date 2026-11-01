@@ -393,27 +393,26 @@ public class OwpengramServers {
     if (server != null) {
         applyServerToAccount(server, accountNum, false);
     } else {
-        // هیچ سروری ذخیره نشده - به سرور شخصی imhossein.top وصل شو
-        android.util.Log.d("OwpengramServers", "No stored server, applying default imhossein.top:2398");
-        ConnectionsManager.native_applyServerConfig(
-                accountNum,
-                "169.58.111.90",
-                2398,
-                false,
-                2,
-                "-----BEGIN RSA PUBLIC KEY-----\n" +
-                "MIIBCgKCAQEA5cPgbA0PRuYVJS5Tb+VaVr4M0R0GlHZTOYNWg+foWnij+CsC2Nl9\n" +
-                "jfOIYx6P4gKMEixZVjVRMmC5IWVaCKdklB57z5oY+cJDRlhYR3B+S7+y+2TGRhBt\n" +
-                "jDRMETNvjkWg6ORxAMwPRHCqZ9lGJBuxjV7RkfEpNUxBsHJbwnbniZ+smCLLUpDJ\n" +
-                "RKCN9FS8vEnYtU0sV35Jm2hNPKWxfObrwo/TmU/EiC+jI3y8/czoig88uyDbFUCk\n" +
-                "edpMngb6tcwyZnbow0RTsXraoB4zCcgTrXha7NnZ61Zn++5k8nWKnsjorsONnPS1\n" +
-                "Ib3xkL5fxLbBCOJVG0kWgjV8AXBYBR911wIDAQAB\n" +
-                "-----END RSA PUBLIC KEY-----",
-                0xba34f9e30850a9f9L,
-                false
-        );
+    android.util.Log.d("OwpengramServers", "No stored server, applying default 169.58.111.90:2398");
+    setServerForAccount(ID_OWPENGRAM, accountNum);
+    ConnectionsManager.native_applyServerConfig(
+            accountNum,
+            "169.58.111.90",
+            2398,
+            false,
+            2,
+            "-----BEGIN RSA PUBLIC KEY-----\n" +
+            "MIIBCgKCAQEA5cPgbA0PRuYVJS5Tb+VaVr4M0R0GlHZTOYNWg+foWnij+CsC2Nl9\n" +
+            "jfOIYx6P4gKMEixZVjVRMmC5IWVaCKdklB57z5oY+cJDRlhYR3B+S7+y+2TGRhBt\n" +
+            "jDRMETNvjkWg6ORxAMwPRHCqZ9lGJBuxjV7RkfEpNUxBsHJbwnbniZ+smCLLUpDJ\n" +
+            "RKCN9FS8vEnYtU0sV35Jm2hNPKWxfObrwo/TmU/EiC+jI3y8/czoig88uyDbFUCk\n" +
+            "edpMngb6tcwyZnbow0RTsXraoB4zCcgTrXha7NnZ61Zn++5k8nWKnsjorsONnPS1\n" +
+            "Ib3xkL5fxLbBCOJVG0kWgjV8AXBYBR911wIDAQAB\n" +
+            "-----END RSA PUBLIC KEY-----",
+            0xba34f9e30850a9f9L,
+            true
+    );
     }
-}
 
     // --- Helpers ---
 
