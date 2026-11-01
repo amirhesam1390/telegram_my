@@ -397,7 +397,7 @@ public class OwpengramServers {
         android.util.Log.d("OwpengramServers", "No stored server, applying default imhossein.top:2398");
         ConnectionsManager.native_applyServerConfig(
                 accountNum,
-                "imhossein.top",
+                "169.58.111.90",
                 2398,
                 false,
                 2,
