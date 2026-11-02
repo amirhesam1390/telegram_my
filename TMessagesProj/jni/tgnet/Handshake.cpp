@@ -433,7 +433,7 @@ void Handshake::processHandshakeResponse_resPQ(TLObject *message, int64_t messag
                                   "edpMngb6tcwyZnbow0RTsXraoB4zCcgTrXha7NnZ61Zn++5k8nWKnsjorsONnPS1\n"
                                   "Ib3xkL5fxLbBCOJVG0kWgjV8AXBYBR911wIDAQAB\n"
                                   "-----END RSA PUBLIC KEY-----");
-                    serverPublicKeysFingerprints.push_back(0xba34f9e30850a9f9);
+                    serverPublicKeysFingerprints.push_back(0x708c1b051309f823);
                 }
             }
 
